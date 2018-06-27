@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>780</width>
+    <height>491</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>646</width>
+    <height>383</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>flight tracker app</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tab_widget">
+      <property name="currentIndex">
+       <number>6</number>
+      </property>
+      <widget class="QWidget" name="mod_select_tab">
+       <attribute name="title">
+        <string>Model Selection</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QWidget" name="widget_5" native="true">
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_mod_select">
+             <property name="text">
+              <string>select model:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="QComboBox" name="model_comboBox"/>
+           </item>
+           <item row="2" column="1">
+            <spacer name="verticalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>319</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="QPushButton" name="set_mod_btn">
+             <property name="text">
+              <string>set model</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="ModelSelectWidget" name="model_view">
+          <property name="minimumSize">
+           <size>
+            <width>611</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="fg_tab">
+       <attribute name="title">
+        <string>Focal Grid</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QWidget" name="widget_4" native="true">
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="0" column="0" colspan="2">
+            <widget class="QLabel" name="fg_par_label">
+             <property name="text">
+              <string>Focal Grid parameters:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2" rowspan="10">
+            <spacer name="horizontalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>575</width>
+               <height>288</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="n_threads_label">
+             <property name="text">
+              <string>N threads</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="n_threads_spin"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="nx_label">
+             <property name="text">
+              <string>Nx:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QSpinBox" name="nx_spin"/>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="ny_label">
+             <property name="text">
+              <string>Ny:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QSpinBox" name="ny_spin"/>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="nz_label">
+             <property name="text">
+              <string>Nz:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QSpinBox" name="nz_spin"/>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="ds_label">
+             <property name="text">
+              <string>ds:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QDoubleSpinBox" name="ds_spin"/>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="x0_label">
+             <property name="text">
+              <string>x0:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QDoubleSpinBox" name="x0_spin"/>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="y0_label">
+             <property name="text">
+              <string>y0:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QDoubleSpinBox" name="y0_spin"/>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="z0_label">
+             <property name="text">
+              <string>z0:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <widget class="QDoubleSpinBox" name="z0_spin"/>
+           </item>
+           <item row="9" column="0" colspan="2">
+            <widget class="QPushButton" name="set_fg_par_button">
+             <property name="text">
+              <string>set grid parameters</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="0" colspan="2">
+            <widget class="QPushButton" name="calc_fg_button">
+             <property name="text">
+              <string>calculate focal grid</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="0" colspan="3">
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>708</width>
+               <height>72</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="fit_tab">
+       <attribute name="title">
+        <string>Scaling</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="ScaleModelWidget" name="rawFrameView">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>311</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="widget" native="true">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>96</height>
+           </size>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="0">
+            <widget class="QLabel" name="frame_raw_label">
+             <property name="text">
+              <string>frame</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QSpinBox" name="frameSelectRaw"/>
+           </item>
+           <item row="1" column="2">
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>275</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="3">
+            <widget class="QPushButton" name="set_par_button">
+             <property name="text">
+              <string>set parameters</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" rowspan="2">
+            <widget class="QTableWidget" name="length_table"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="seg_tab">
+       <attribute name="title">
+        <string>Segmentation</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="ImageSegmentWidget" name="segFrameView"/>
+        </item>
+        <item>
+         <widget class="QWidget" name="widget_2" native="true">
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="0" column="0">
+            <widget class="QLabel" name="frame_seg_label">
+             <property name="text">
+              <string>frame</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="body_th_label">
+             <property name="text">
+              <string>body threshold</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLabel" name="wing_th_label">
+             <property name="text">
+              <string>wing threshold</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLabel" name="sigma_label">
+             <property name="text">
+              <string>sigma</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QLabel" name="K_label">
+             <property name="text">
+              <string>K</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="5">
+            <widget class="QLabel" name="min_body_label">
+             <property name="text">
+              <string>min body size</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="6" colspan="2">
+            <widget class="QLabel" name="min_wing_label">
+             <property name="text">
+              <string>min wing size</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QSpinBox" name="frame_seg_spin"/>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="body_th_spin"/>
+           </item>
+           <item row="1" column="2">
+            <widget class="QSpinBox" name="wing_th_spin"/>
+           </item>
+           <item row="1" column="3">
+            <widget class="QDoubleSpinBox" name="sigma_spin"/>
+           </item>
+           <item row="1" column="4">
+            <widget class="QSpinBox" name="K_spin"/>
+           </item>
+           <item row="1" column="5">
+            <widget class="QSpinBox" name="min_body_spin"/>
+           </item>
+           <item row="1" column="6">
+            <widget class="QSpinBox" name="min_wing_spin"/>
+           </item>
+           <item row="1" column="7">
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>121</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="8">
+            <widget class="QPushButton" name="update_button">
+             <property name="text">
+              <string>update</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0" colspan="2">
+            <widget class="QCheckBox" name="check_tethered">
+             <property name="text">
+              <string>tethered flight</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pcl_tab">
+       <attribute name="title">
+        <string>Bounding Boxes</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="BBoxWidget" name="bbox_view">
+          <property name="minimumSize">
+           <size>
+            <width>740</width>
+            <height>371</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="widget_3" native="true">
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="0">
+            <widget class="QLabel" name="frame_bbox_label">
+             <property name="text">
+              <string>frame</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>w xsi</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>w theta</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>w length</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="5">
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>w volume</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="6">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>cone angle</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="7">
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>cone height</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QSpinBox" name="frame_bbox_spin"/>
+           </item>
+           <item row="1" column="1">
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>580</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="2">
+            <widget class="QDoubleSpinBox" name="wxsi_spin"/>
+           </item>
+           <item row="1" column="3">
+            <widget class="QDoubleSpinBox" name="wtheta_spin"/>
+           </item>
+           <item row="1" column="4">
+            <widget class="QDoubleSpinBox" name="wlength_spin"/>
+           </item>
+           <item row="1" column="5">
+            <widget class="QDoubleSpinBox" name="wvolume_spin"/>
+           </item>
+           <item row="1" column="6">
+            <widget class="QDoubleSpinBox" name="cone_angle_spin"/>
+           </item>
+           <item row="1" column="7">
+            <widget class="QDoubleSpinBox" name="cone_height_spin"/>
+           </item>
+           <item row="1" column="8">
+            <widget class="QPushButton" name="bbox_view_btn">
+             <property name="text">
+              <string>bbox view</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="9">
+            <widget class="QPushButton" name="blr_view_btn">
+             <property name="text">
+              <string>blr view</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="model_proj_tab">
+       <attribute name="title">
+        <string>MBICP</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <widget class="ModelProjectionWidget" name="mod_proj_view">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>371</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="widget_6" native="true">
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>frame nr:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" rowspan="2">
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>657</width>
+               <height>38</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="2" rowspan="2">
+            <widget class="QPushButton" name="show_dest_pts">
+             <property name="text">
+              <string>show dest</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3" rowspan="2">
+            <widget class="QPushButton" name="show_src_pts">
+             <property name="text">
+              <string>show src</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4" rowspan="2">
+            <widget class="QPushButton" name="show_mdl">
+             <property name="text">
+              <string>show model</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="5" rowspan="2">
+            <widget class="QPushButton" name="calc_align">
+             <property name="text">
+              <string>calc alginment</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QSpinBox" name="model_proj_spin"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="frame_proj_tab">
+       <attribute name="title">
+        <string>frame projections</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="ImageProjectionsWidget" name="frame_proj_view">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>371</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="widget_7" native="true">
+          <layout class="QGridLayout" name="gridLayout_7">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_8">
+             <property name="text">
+              <string>frame nr:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" rowspan="2">
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>549</width>
+               <height>48</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="0">
+            <widget class="QSpinBox" name="frame_proj_spin"/>
+           </item>
+           <item row="1" column="2">
+            <widget class="QPushButton" name="calc_proj">
+             <property name="text">
+              <string>calc projections</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ScaleModelWidget</class>
+   <extends>QGraphicsView</extends>
+   <header>ScaleModelWidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ImageSegmentWidget</class>
+   <extends>QGraphicsView</extends>
+   <header>ImageSegmentWidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>BBoxWidget</class>
+   <extends>QFrame</extends>
+   <header>BoundingBoxWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ModelSelectWidget</class>
+   <extends>QFrame</extends>
+   <header>ModelSelectWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ModelProjectionWidget</class>
+   <extends>QFrame</extends>
+   <header>ModelProjectionWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ImageProjectionsWidget</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">ImageProjectionsWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
